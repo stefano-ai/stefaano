@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "src",
+    "module": "CommonJS",
+    "target": "ES2021",
+    "moduleResolution": "Node",
+    "types": ["node"],
+    "baseUrl": "./src",
+    "paths": {
+      "@dnd-tabletop-sim/shared": ["../../packages/shared/src"]
+    }
+  },
+  "include": ["src"]
+}
