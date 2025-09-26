@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "types": ["vite/client"],
+    "baseUrl": "./src",
+    "paths": {
+      "@dnd-tabletop-sim/shared": ["../../packages/shared/src"]
+    },
+    "noEmit": true
+  },
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
