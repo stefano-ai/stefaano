@@ -21,6 +21,13 @@ const client = new OpenAIClient({
 const app = express();
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
+app.get('/health', (_req, res) => {
+  res.json({
+    status: 'ok',
+    rateLimitPerMinute: client.rateLimiter?.requestsPerMinute || null,
+  });
+});
+
 app.post('/api/describe', upload.single('image'), async (req, res) => {
   const prompt = req.body?.prompt || 'Describe the image';
   const imageBuffer = req.file?.buffer;
