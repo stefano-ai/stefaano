@@ -2,6 +2,12 @@
 
 A minimal Express app that streams GPT-4o descriptions for uploaded JPEGs. Requests are rate-limited and retried with backoff, and every prompt is prefixed with a safety message to avoid speculative answers.
 
+## Project structure
+- `src/openaiClient.js`: OpenAI client wrapper that prefixes prompts, enforces rate limits, and streams text deltas.
+- `src/rateLimiter.js`: Sliding-window budget tracker for requests per minute.
+- `src/server.js`: Express server with SSE streaming endpoint for JPEG uploads.
+- `public/`: Lightweight web UI (`index.html`, `app.js`, `styles.css`) for uploading an image and viewing streamed responses.
+
 ## Setup
 1. Install dependencies:
    ```bash
