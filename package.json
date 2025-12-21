@@ -1,0 +1,14 @@
+{
+  "name": "stefaano",
+  "version": "1.0.0",
+  "description": "Image description client with streaming GPT-4o support",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "NODE_ENV=development node src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "multer": "^2.0.0"
+  }
+}

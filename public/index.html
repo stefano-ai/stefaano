@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GPT-4o Image Describer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>GPT-4o Image Describer</h1>
+      <form id="describe-form">
+        <label>
+          Prompt
+          <input type="text" name="prompt" id="prompt" placeholder="Describe the scene" required />
+        </label>
+        <label>
+          Image (JPEG)
+          <input type="file" name="image" id="image" accept="image/jpeg" required />
+        </label>
+        <button type="submit">Send</button>
+      </form>
+      <section class="output">
+        <h2>Response</h2>
+        <pre id="response"></pre>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
